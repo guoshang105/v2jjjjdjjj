@@ -40,24 +40,24 @@ jobs:
           echo "NEODEVPRO_ADS_REJECT_URL=https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblocker" >> $GITHUB_ENV
 
       - name: Checkout the "hidden" branch of this repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: hidden
 
       - name: Checkout Loyalsoldier/domain-list-custom
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: Loyalsoldier/domain-list-custom
           path: custom
 
       - name: Checkout v2fly/domain-list-community
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: v2fly/domain-list-community
           path: community
 
       - name: Checkout cokebar/gfwlist2dnsmasq
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: cokebar/gfwlist2dnsmasq
           path: gfwlist2dnsmasq
@@ -195,7 +195,7 @@ jobs:
           go-version: ^1.19
 
       - name: Checkout techprober/v2dat
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: techprober/v2dat
 
@@ -260,7 +260,7 @@ jobs:
           echo "RELEASE_DATE=$(date +%Y-%m-%d-%H-%M)" >> $GITHUB_ENV
 
       - name: Checkout the master branch of this repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Copy artifacts from build job to local path
         uses: actions/download-artifact@v3
